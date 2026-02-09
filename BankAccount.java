@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-// Class representing the user's bank account
 class BankAccount {
     private double balance;
 
@@ -10,34 +9,33 @@ class BankAccount {
 
     public void deposit(double amount) {
         if (amount <= 0) {
-            System.out.println("❌ Invalid deposit amount.");
+            System.out.println(" Invalid deposit amount.");
             return;
         }
         balance += amount;
-        System.out.println("✅ Deposited: ₹" + amount);
+        System.out.println(" Deposited: ₹" + amount);
     }
 
     public void withdraw(double amount) {
         if (amount <= 0) {
-            System.out.println("❌ Invalid withdrawal amount.");
+            System.out.println(" Invalid withdrawal amount.");
         } else if (amount > balance) {
-            System.out.println("❌ Insufficient balance.");
+            System.out.println(" Insufficient balance.");
         } else {
             balance -= amount;
-            System.out.println("✅ Withdrawn: ₹" + amount);
+            System.out.println(" Withdrawn: ₹" + amount);
         }
     }
 
     public void checkBalance() {
-        System.out.println("💰 Current Balance: ₹" + balance);
+        System.out.println("Current Balance: ₹" + balance);
     }
 }
 
-// Class representing the ATM interface
  class ATMInterface {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BankAccount account = new BankAccount(5000.00); // starting balance
+        BankAccount account = new BankAccount(5000.00); 
 
         System.out.println("===== Welcome to the ATM =====");
 
@@ -55,7 +53,7 @@ class BankAccount {
             if (scanner.hasNextInt()) {
                 choice = scanner.nextInt();
             } else {
-                System.out.println("❌ Invalid input. Please enter a number.");
+                System.out.println("Invalid input. Please enter a number.");
                 scanner.next(); 
                 continue;
             }
@@ -75,12 +73,13 @@ class BankAccount {
                     account.withdraw(withdrawAmount);
                     break;
                 case 4:
-                    System.out.println("🔒 Thank you for using the ATM. Goodbye!");
+                    System.out.println(" Thank you for using the ATM. Goodbye!");
                     scanner.close();
                     return;
                 default:
-                    System.out.println("❌ Invalid option. Please try again.");
+                    System.out.println(" Invalid option. Please try again.");
             }
         }
     }
+
 }
