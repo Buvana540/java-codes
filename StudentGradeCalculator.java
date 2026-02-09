@@ -34,7 +34,7 @@ import java.util.Scanner;
             grade = "F";
         }
 
-        // Display results
+      
         System.out.println("\n--- Result ---");
         System.out.println("Total Marks: " + total);
         System.out.println("Average Percentage: " + average + "%");
@@ -42,4 +42,5 @@ import java.util.Scanner;
 
         scanner.close();
     }
+
 }
