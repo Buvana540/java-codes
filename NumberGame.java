@@ -34,7 +34,7 @@ import java.util.Random;
                 attempts++;
 
                 if (userGuess == numberToGuess) {
-                    System.out.println("🎉 Correct! You guessed the number in " + attempts + " attempts.");
+                    System.out.println("Correct! You guessed the number in " + attempts + " attempts.");
                     score += (maxAttempts - attempts + 1); 
                     guessedCorrectly = true;
                     break;
@@ -46,7 +46,7 @@ import java.util.Random;
             }
 
             if (!guessedCorrectly) {
-                System.out.println("❌ You've used all attempts! The correct number was: " + numberToGuess);
+                System.out.println("You've used all attempts! The correct number was: " + numberToGuess);
             }
 
             System.out.print("\nDo you want to play another round? (yes/no): ");
@@ -62,4 +62,5 @@ import java.util.Random;
         System.out.println("\nGame Over! Your total score: " + score);
         scanner.close();
     }
+
 }
